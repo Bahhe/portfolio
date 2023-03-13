@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import {
   GiBarbute,
@@ -9,11 +10,21 @@ import {
 const About = () => {
   return (
     <section className="w-3/4 mx-auto my-20">
-      <div className="flex items-center gap-5">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex items-center gap-5"
+      >
         <BsFillInfoCircleFill className="text-3xl text-green-500" />
         <h1 className="text-white text-5xl font-bold capitalize">About me</h1>
-      </div>
-      <div className="ml-20 mt-20 text-white flex gap-10">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="ml-20 mt-20 text-white flex gap-10"
+      >
         <p>
           <span className="text-3xl font-bold">
             <GiBatteredAxe className="inline mr-5 mb-2" />
@@ -65,7 +76,7 @@ const About = () => {
           your ideas to life. Thank you for considering me as a partner in your
           next project!
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };
