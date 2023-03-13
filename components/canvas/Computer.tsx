@@ -8,14 +8,14 @@ const Computer = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={2} groundColor="white" />
-      <spotLight
-        position={[-10, 0, 0]}
-        penumbra={2}
-        intensity={4}
-        castShadow
-        shadow-mapSize={1024}
-      />
+      <hemisphereLight intensity={2} groundColor="black" />
+      {/* <spotLight */}
+      {/*   position={[-10, 0, 0]} */}
+      {/*   penumbra={2} */}
+      {/*   intensity={4} */}
+      {/*   castShadow */}
+      {/*   shadow-mapSize={1024} */}
+      {/* /> */}
       <primitive object={computer.scene} scale={4} position={[0, 0, 0]} />
     </mesh>
   );
@@ -58,7 +58,7 @@ const ComputerCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          autoRotate={true}
+          // autoRotate={true}
         />
         <Computer />
       </Suspense>

@@ -5,21 +5,23 @@ import AstronautCanvas from "./canvas/Astonaut";
 import { FormEvent, useRef } from "react";
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    const currentForm = form.current;
+    if (currentForm == null) return;
     emailjs
       .sendForm(
         "service_7ifymxp",
         "template_1jluchl",
-        form.current,
+        currentForm,
         "K2SgTvTxH6jO38nqH"
       )
       .then(
         (result) => {
           console.log(result.text);
+          alert("you message was sent successfully");
         },
         (error) => {
           console.log(error.text);

@@ -4,14 +4,14 @@ import Contact from "@/components/Contact";
 import LandingSection from "@/components/LandingSection";
 import Life from "@/components/Life";
 import Projects from "@/components/Projects";
-// import { useFollowPointer } from "@/hooks/use-follow-pointer";
-// import { motion } from "framer-motion";
+import { useFollowPointer } from "@/hooks/use-follow-pointer";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 import Head from "next/head";
-// import { useRef } from "react";
 
 export default function Home() {
-  // const ref = useRef(null);
-  // const { x, y } = useFollowPointer(ref);
+  const ref = useRef(null);
+  const { x, y } = useFollowPointer(ref);
   return (
     <>
       <Head>
@@ -27,17 +27,17 @@ export default function Home() {
         <Life />
         <Projects />
         <Contact />
-        {/* <motion.div */}
-        {/*   className="w-10 h-10 rounded-full bg-red-500 absolute" */}
-        {/*   ref={ref} */}
-        {/*   animate={{ x, y }} */}
-        {/*   transition={{ */}
-        {/*     type: "spring", */}
-        {/*     damping: 3, */}
-        {/*     stiffness: 50, */}
-        {/*     restDelta: 0.001, */}
-        {/*   }} */}
-        {/* /> */}
+        <motion.div
+          className="w-10 h-10 rounded-full bg-red-500 absolute"
+          ref={ref}
+          animate={{ x, y }}
+          transition={{
+            type: "spring",
+            damping: 3,
+            stiffness: 50,
+            restDelta: 0.001,
+          }}
+        />
       </main>
     </>
   );
