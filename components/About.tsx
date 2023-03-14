@@ -9,12 +9,13 @@ import {
 
 const About = () => {
   return (
-    <section className="w-3/4 mx-auto my-20">
+    <section className="lg:w-3/4 mx-auto my-20 w-5/6">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex items-center gap-5"
+        viewport={{ once: true, amount: 0.8 }}
+        className="flex items-center gap-5 "
       >
         <BsFillInfoCircleFill className="text-3xl text-green-500" />
         <h1 className="text-white text-5xl font-bold capitalize">About me</h1>
@@ -23,7 +24,8 @@ const About = () => {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="ml-20 mt-20 text-white flex gap-10"
+        viewport={{ once: true, amount: 0.8 }}
+        className=" lg:ml-20 mt-20 text-white flex gap-10 flex-col lg:flex-row"
       >
         <p>
           <span className="text-3xl font-bold">

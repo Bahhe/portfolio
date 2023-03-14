@@ -20,6 +20,7 @@ const Projects = () => {
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.8 }}
         className="flex items-center gap-5 my-20"
       >
         <VscProject className="text-3xl text-green-500" />
@@ -29,7 +30,8 @@ const Projects = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="w-1/2 text-lg ml-28 mb-20"
+        viewport={{ once: true, amount: 0.8 }}
+        className="w-5/6 lg:w-1/2 text-lg lg:ml-28 mb-20"
       >
         <p>
           Here are two projects that I built one with MERN and the other with
@@ -42,13 +44,14 @@ const Projects = () => {
           functionality, and secure payment options.
         </p>
       </motion.div>
-      <div className="flex items-center justify-center gap-20">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-20">
         <Tilt>
           <motion.div
             initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-96 h-[500px] border border-white rounded"
+            viewport={{ once: true, amount: 0.8 }}
+            className="lg:w-96 w-72 h-[500px] border border-white rounded"
           >
             <div className="h-2/5 p-5 flex items-center justify-center">
               <Image
@@ -94,7 +97,8 @@ const Projects = () => {
             initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-96 h-[500px] border border-white rounded"
+            viewport={{ once: true, amount: 0.8 }}
+            className="lg:w-96 w-72 h-[500px] border border-white rounded"
           >
             <div className="h-2/5 p-5 flex items-center justify-center">
               <Image

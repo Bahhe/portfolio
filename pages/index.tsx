@@ -1,17 +1,20 @@
 import About from "@/components/About";
 import Background from "@/components/Background";
+import Buttons from "@/components/Buttons";
 import Contact from "@/components/Contact";
 import LandingSection from "@/components/LandingSection";
 import Life from "@/components/Life";
 import Projects from "@/components/Projects";
-import { useFollowPointer } from "@/hooks/use-follow-pointer";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useVariants } from "@/hooks/use-mouse-tracker";
+import { motion, spring } from "framer-motion";
 import Head from "next/head";
+import { useRef } from "react";
+import { TbBrandReact } from "react-icons/tb";
 
 export default function Home() {
   const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
+
+  const variants = useVariants(ref);
   return (
     <>
       <Head>
@@ -20,24 +23,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col text-white">
+      <main className="flex flex-col text-white overflow-hidden" ref={ref}>
         <Background />
         <LandingSection />
         <About />
         <Life />
         <Projects />
         <Contact />
+        <Buttons />
         <motion.div
-          className="w-10 h-10 rounded-full bg-red-500 absolute"
-          ref={ref}
-          animate={{ x, y }}
-          transition={{
-            type: "spring",
-            damping: 3,
-            stiffness: 50,
-            restDelta: 0.001,
-          }}
-        />
+          variants={variants}
+          className="circle"
+          animate="default"
+          transition={spring}
+        >
+          <TbBrandReact className=" border border-white bg-black rounded-full" />
+        </motion.div>
       </main>
     </>
   );
