@@ -10,27 +10,25 @@ import {
   TbBrandTypescript,
 } from "react-icons/tb";
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <section className="w-5/6 mx-auto mt-10">
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.8 }}
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true, amount: 0 }}
         className="flex items-center gap-5 my-20"
       >
         <VscProject className="text-3xl text-green-500" />
         <h1 className="text-white text-5xl font-bold capitalize">Projects</h1>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.8 }}
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true, amount: 0 }}
         className="w-5/6 lg:w-1/2 text-lg lg:ml-28 mb-20"
       >
         <p>
@@ -44,15 +42,14 @@ const Projects = () => {
           functionality, and secure payment options.
         </p>
       </motion.div>
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-20">
+      <motion.div
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true, amount: 0 }}
+        className="flex flex-col lg:flex-row items-center justify-center gap-20"
+      >
         <Tilt>
-          <motion.div
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.8 }}
-            className="lg:w-96 w-72 h-[500px] border border-white rounded"
-          >
+          <div className="lg:w-96 w-72 h-[500px] border border-white rounded">
             <div className="h-2/5 p-5 flex items-center justify-center">
               <Image
                 src={projectOne}
@@ -90,14 +87,13 @@ const Projects = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </Tilt>
         <Tilt>
           <motion.div
-            initial={{ x: 300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.8 }}
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            viewport={{ once: true, amount: 0 }}
             className="lg:w-96 w-72 h-[500px] border border-white rounded"
           >
             <div className="h-2/5 p-5 flex items-center justify-center">
@@ -139,7 +135,7 @@ const Projects = () => {
             </div>
           </motion.div>
         </Tilt>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -37,7 +37,7 @@ export default function Home() {
           animate="default"
           transition={spring}
         >
-          <TbBrandReact className=" border border-white bg-black rounded-full" />
+          <TbBrandReact className="border border-white bg-black rounded-full" />
         </motion.div>
       </main>
     </>
