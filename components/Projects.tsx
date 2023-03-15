@@ -50,13 +50,17 @@ const Projects = () => {
       >
         <Tilt>
           <div className="lg:w-96 w-72 h-[500px] border border-white rounded">
-            <div className="h-2/5 p-5 flex items-center justify-center">
+            <a
+              href="https://blackbeard-beta.vercel.app/"
+              target="_blank"
+              className="h-2/5 p-5 flex items-center justify-center"
+            >
               <Image
                 src={projectOne}
                 alt="website picture"
                 className="object-cover rounded"
               />
-            </div>
+            </a>
             <div className="mx-4 my-2 flex items-center gap-2 text-2xl">
               <SiTrpc />
               <TbBrandNextjs />
@@ -96,13 +100,17 @@ const Projects = () => {
             viewport={{ once: true, amount: 0 }}
             className="lg:w-96 w-72 h-[500px] border border-white rounded"
           >
-            <div className="h-2/5 p-5 flex items-center justify-center">
+            <a
+              href="https://blackbeardt.store"
+              target="_blank"
+              className="h-2/5 p-5 flex items-center justify-center"
+            >
               <Image
                 src={projectTwo}
                 alt="website picture"
                 className="object-cover rounded"
               />
-            </div>
+            </a>
             <div className="mx-4 my-2 flex items-center gap-2 text-2xl">
               <FaNodeJs />
               <SiMongodb />
