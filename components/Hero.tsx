@@ -4,23 +4,31 @@ import ComputerCanvas from "./canvas/Computer";
 import { FaReact } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiJavascript } from "react-icons/si";
+import Scroll from "./Scroll";
+import { motion } from "framer-motion";
 
-const LandingSection = () => {
+const Hero = () => {
   return (
     <section className="mx-auto lg:w-1/2 h-screen">
       <div className="flex justify-center items-center gap-10 mt-20">
         <div className="relative hidden lg:block">
-          <Image
-            src={mypic}
-            alt="mypic"
-            width={200}
-            height={200}
-            className="rounded-full border border-white "
-          />
-          <div className="w-1 h-96 absolute left-1/2 -translate-x-1/2 bg-gradient-to-b from-white via-white to-black"></div>
-          <FaReact className=" bg-black absolute left-1/2 -bottom-32 -translate-x-1/2 -translate-y-1/2 text-white text-7xl" />
-          <TbBrandTypescript className=" bg-black absolute left-1/2 -bottom-56 -translate-x-1/2 -translate-y-1/2 text-white text-6xl" />
-          <SiJavascript className=" bg-black absolute left-1/2 -bottom-80 -translate-x-1/2 -translate-y-1/2 text-white text-4xl" />
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-52 h-52"
+          >
+            <Image
+              src={mypic}
+              alt="mypic"
+              width={200}
+              height={200}
+              className="rounded-full border border-white cursor-pointer"
+            />
+          </motion.div>
+          <div className="w-1 h-96 absolute left-1/2 -translate-x-1/2 bg-gradient-to-b from-white via-white to-black -z-10"></div>
+          <FaReact className="bg-black absolute left-1/2 -bottom-32 -translate-x-1/2 -translate-y-1/2 text-white text-7xl" />
+          <TbBrandTypescript className="bg-black absolute left-1/2 -bottom-56 -translate-x-1/2 -translate-y-1/2 text-white text-6xl" />
+          <SiJavascript className="bg-black absolute left-1/2 -bottom-80 -translate-x-1/2 -translate-y-1/2 text-white text-4xl" />
         </div>
         <div className="relative">
           <h1 className="text-white lg:text-4xl font-bold ml-10 lg:ml-auto">
@@ -36,7 +44,8 @@ const LandingSection = () => {
           </div>
         </div>
       </div>
+      <Scroll />
     </section>
   );
 };
-export default LandingSection;
+export default Hero;

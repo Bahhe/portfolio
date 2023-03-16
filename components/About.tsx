@@ -9,21 +9,25 @@ import {
 
 const About = () => {
   return (
-    <section className="w-3/4 md:w-5/6 mx-auto lg:my-20">
+    <section id="about" className="w-3/4 md:w-5/6 mx-auto lg:my-20">
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="flex items-center gap-5 mt-16 lg:mt-0"
       >
         <BsFillInfoCircleFill className="text-3xl text-green-500" />
-        <h1 className="text-white text-5xl font-bold capitalize">About me</h1>
+        <h1 className="text-white text-5xl font-bold capitalize mt-5">
+          About me
+        </h1>
       </motion.div>
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0 }}
-        className="lg:ml-20 mt-20 text-white flex gap-10 flex-col lg:flex-row"
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="lg:ml-20 mt-20 text-white flex gap-10 flex-wrap xl:flex-nowrap"
       >
         <p>
           <span className="text-3xl font-bold">
@@ -40,11 +44,12 @@ const About = () => {
           <span className="text-3xl font-bold">
             <GiBarbute className="inline mr-5 mb-2" />
           </span>
-          My main area of expertise is working with the React.js framework,
-          using it to create beautiful, responsive user interfaces that
-          prioritize user experience. Additionally, I have experience building
-          full-stack applications with the{" "}
-          <span className="text-green-500">MERN </span>stack{" "}
+          My main area of expertise is working with the{" "}
+          <span className="text-green-500">React.js</span> framework, using it
+          to create beautiful, responsive user interfaces that prioritize user
+          experience. Additionally, I have experience building full-stack
+          applications with the <span className="text-green-500">MERN </span>
+          stack{" "}
           <span className="text-green-500">
             (MongoDB, Express.js, React.js, and Node.js)
           </span>{" "}

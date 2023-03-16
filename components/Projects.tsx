@@ -17,17 +17,19 @@ const Projects = () => {
   return (
     <section className="w-5/6 mx-auto mt-10">
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="flex items-center gap-5 my-20"
       >
         <VscProject className="text-3xl text-green-500" />
         <h1 className="text-white text-5xl font-bold capitalize">Projects</h1>
       </motion.div>
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true, amount: 0 }}
         className="w-5/6 lg:w-1/2 text-lg lg:ml-28 mb-20"
       >
@@ -42,14 +44,15 @@ const Projects = () => {
           functionality, and secure payment options.
         </p>
       </motion.div>
-      <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true, amount: 0 }}
-        className="flex flex-col lg:flex-row items-center justify-center gap-20"
-      >
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-20">
         <Tilt>
-          <div className="lg:w-96 w-72 h-[500px] border border-white rounded">
+          <motion.div
+            initial={{ x: -300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="lg:w-96 w-72 h-[500px] border border-white rounded"
+          >
             <a
               href="https://blackbeard-beta.vercel.app/"
               target="_blank"
@@ -91,13 +94,14 @@ const Projects = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </Tilt>
         <Tilt>
           <motion.div
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="lg:w-96 w-72 h-[500px] border border-white rounded"
           >
             <a
@@ -143,7 +147,7 @@ const Projects = () => {
             </div>
           </motion.div>
         </Tilt>
-      </motion.div>
+      </div>
     </section>
   );
 };

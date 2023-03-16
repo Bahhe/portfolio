@@ -7,8 +7,9 @@ const Life = () => {
   return (
     <section className="w-3/4 md:w-5/6 mx-auto lg:my-20">
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true, amount: 0 }}
         className="flex items-center gap-5 mt-20 lg:mt-0"
       >
@@ -16,12 +17,13 @@ const Life = () => {
         <h1 className="text-white text-5xl font-bold capitalize">My Life</h1>
       </motion.div>
       <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0 }}
-        className="h-[600px] lg:h-[700px] lg:overflow-hidden overflow-x-scroll overflow-y-hidden px-28 lg:px-0"
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="h-[600px] lg:h-[700px] xl:overflow-hidden overflow-x-scroll overflow-y-hidden px-28 xl:px-0"
       >
-        <div className="relative lg:w-3/4 lg:mx-auto w-[1500px] h-1 bg-gradient-to-l from-black via-white to-black mt-40 lg:mb-96 rounded-full">
+        <div className="relative xl:w-3/4 lg:mx-auto w-[1500px] h-1 bg-gradient-to-l from-black via-white to-black mt-40 lg:mb-96 rounded-full">
           <div className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-full absolute bottom-1/2 translate-y-1/2 border border-white">
             <GiNewBorn className="text-2xl" />
           </div>
