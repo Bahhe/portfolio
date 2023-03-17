@@ -31,7 +31,7 @@ const Hero = () => {
           <SiJavascript className="bg-black absolute left-1/2 -bottom-80 -translate-x-1/2 -translate-y-1/2 text-white text-4xl" />
         </div>
         <div className="relative">
-          <h1 className="text-white lg:text-4xl font-bold ml-10 lg:ml-auto">
+          <h1 className="text-white text-2xl lg:text-4xl font-bold ml-10 lg:ml-auto">
             <span className="lg:text-7xl text-4xl">Hi,</span> I&apos;m{" "}
             <span className="text-green-500">Baha Eddine</span>
           </h1>

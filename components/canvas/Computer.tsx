@@ -3,25 +3,31 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Earth = () => {
-  const earth = useGLTF("./retro_computer/scene.gltf");
+const Computer = () => {
+  const computer = useGLTF("./retro_computer/scene.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={2} groundColor="white" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
+      <hemisphereLight intensity={0.5} groundColor="white" />
+      <directionalLight
+        position={[5, 5, 0]}
+        intensity={6.5}
+        castShadow={true}
+        shadowBias={-0.00001}
+        shadow-camera-near={0.1}
+        shadow-camera-far={20}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
       />
       <primitive
-        object={earth.scene}
-        scale={3}
-        position={[-2.5, 2, 2.5]}
-        rotation={[0, -4.9, 0]}
+        object={computer.scene}
+        scale={0.11}
+        position-y={-1.2}
+        position-z={1}
+        position-x={-3.3}
+        rotation-y={-1.4}
       />
     </mesh>
   );
@@ -30,11 +36,16 @@ const Earth = () => {
 const ComputerCanvas = () => {
   return (
     <Canvas
-      frameloop="demand"
       shadows
+      frameloop="demand"
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 35 }}
       gl={{ preserveDrawingBuffer: true }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [1, 3, 6],
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -42,7 +53,7 @@ const ComputerCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Computer />
       </Suspense>
       <Preload all />
     </Canvas>

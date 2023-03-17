@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Astronaut = () => {
+const Earth = () => {
   const earth = useGLTF("./astronaut/scene.gltf");
 
   return (
@@ -16,7 +16,7 @@ const Astronaut = () => {
   );
 };
 
-const AstronautCanvas = () => {
+const EarthCanvas = () => {
   return (
     <Canvas
       shadows
@@ -38,7 +38,7 @@ const AstronautCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Astronaut />
+        <Earth />
 
         <Preload all />
       </Suspense>
@@ -46,4 +46,4 @@ const AstronautCanvas = () => {
   );
 };
 
-export default AstronautCanvas;
+export default EarthCanvas;

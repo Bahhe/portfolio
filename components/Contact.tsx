@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { AiOutlinePhone } from "react-icons/ai";
-import AstronautCanvas from "./canvas/Earth";
+import EarthCanvas from "./canvas/Earth";
 import { FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -85,7 +85,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0 }}
         >
           <div className="hidden lg:block w-[500px] h-[500px]">
-            <AstronautCanvas />
+            <EarthCanvas />
           </div>
         </motion.div>
       </div>
