@@ -9,12 +9,15 @@ const Scroll = () => {
         animate={{
           y: [0, 24, 0],
         }}
+        style={{
+          translateX: "50%",
+        }}
         transition={{
           duration: 1.5,
           repeat: Infinity,
           repeatType: "loop",
         }}
-        className="absolute left-1/2 bottom-10 text-3xl"
+        className="absolute right-1/2 bottom-10 text-3xl"
       >
         <TfiAngleDoubleDown />
       </motion.div>

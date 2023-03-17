@@ -39,7 +39,7 @@ const Hero = () => {
             As a software engineer, I specialize in developing efficient,
             reliable, and user-friendly software solutions.
           </p>
-          <div className="absolute bottom-[-500px] flex items-center justify-center text-white h-96 w-full lg:w-96">
+          <div className="absolute bottom-[-400px] flex items-center justify-center text-white h-96 w-full lg:w-96">
             <ComputerCanvas />
           </div>
         </div>

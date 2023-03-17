@@ -2,10 +2,17 @@ import { GiBarbarian, GiDiploma, GiNewBorn } from "react-icons/gi";
 import { TbSchoolOff } from "react-icons/tb";
 import { MdWork } from "react-icons/md";
 import { motion } from "framer-motion";
+import Swipe from "./Swipe";
+import { useState } from "react";
 
 const Life = () => {
+  const [show, setShow] = useState(true);
+  const handleScroll = () => {
+    setShow(false);
+  };
+  console.log(show);
   return (
-    <section className="w-3/4 md:w-5/6 mx-auto lg:my-20">
+    <section className="relative w-3/4 md:w-5/6 mx-auto lg:my-20">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -22,6 +29,7 @@ const Life = () => {
         viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className="h-[600px] lg:h-[700px] xl:overflow-hidden overflow-x-scroll overflow-y-hidden px-28 xl:px-0"
+        onScroll={handleScroll}
       >
         <div className="relative xl:w-3/4 lg:mx-auto w-[1500px] h-1 bg-gradient-to-l from-black via-white to-black mt-40 lg:mb-96 rounded-full">
           <div className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-full absolute bottom-1/2 translate-y-1/2 border border-white">
@@ -89,6 +97,7 @@ const Life = () => {
             </p>
           </div>
         </div>
+        <Swipe show={show} />
       </motion.div>
     </section>
   );
