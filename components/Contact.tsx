@@ -60,7 +60,7 @@ const Contact = () => {
               className="py-3 px-4 my-5 bg-transparent rounded border border-white placeholder-white w-52 lg:w-80"
             />
             <input
-              type="email"
+              type="from_email"
               placeholder="Email"
               name="user_email"
               className="py-3 px-4 my-5 bg-transparent rounded border border-white placeholder-white w-52 lg:w-80"

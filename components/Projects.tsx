@@ -72,7 +72,7 @@ const Projects = () => {
             </div>
             <div className="h-1/2 flex flex-col justify-evenly">
               <h1 className="mx-4 my-2 text-2xl font-bold capitalize">
-                ecommerce website
+                BlackBeard-v2
               </h1>
               <p className="mx-4 my-2">
                 An ecommerce website that sells laptops offers a wide range of
@@ -123,7 +123,7 @@ const Projects = () => {
             </div>
             <div className="h-1/2 flex flex-col justify-evenly">
               <h1 className="mx-4 my-2 text-2xl font-bold capitalize">
-                ecommerce website
+                BlackBeard
               </h1>
               <p className="mx-4 my-2">
                 An ecommerce website that sells laptops offers a wide range of
