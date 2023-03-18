@@ -32,20 +32,29 @@ const Buttons = () => {
           onClick={scrollToBottom}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="py-2 px-4 border border-white rounded w-32"
+          className="py-2 px-2 border border-white rounded w-28"
         >
           Contact me
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="py-2 px-4 border border-white rounded w-32"
+          className="py-2 px-2 border border-white rounded w-28"
         >
           <a
             target="_blank"
             href="https://docs.google.com/document/d/1YwO41QGgIVKbG7VCC7mEcg78DDoGuGFbn04rOn4K_k4/edit?usp=sharing"
           >
             Download PDF
+          </a>
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="py-2 px-2 border border-white rounded w-28"
+        >
+          <a target="_blank" href="https://blog-fawn-rho.vercel.app">
+            Personal Blog
           </a>
         </motion.button>
       </div>
