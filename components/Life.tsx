@@ -56,7 +56,7 @@ const Life = () => {
           <p className="absolute -top-16 left-[100%] w-32 -translate-x-1/2">
             currently - 2024
           </p>
-          <div className="absolute -bottom-64 left-5 -translate-x-1/2 w-56 p-5 border border-white rounded-lg">
+          <div className="absolute -bottom-64 left-5 -translate-x-1/2 w-56 p-5 border border-white rounded-lg backdrop-blur">
             <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-white border-r-[20px] border-r-transparent"></div>
             <p>
               Software engineer born 09 Aug 1999 in Batna, Algeria. Batna is a
@@ -64,7 +64,7 @@ const Life = () => {
               Mountains and its Roman heritage.
             </p>
           </div>
-          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[30%] md:left-[32%] -translate-x-1/2 w-96 lg:w-80 p-5 border border-white rounded-lg">
+          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[30%] md:left-[32%] -translate-x-1/2 w-96 lg:w-80 p-5 border border-white rounded-lg backdrop-blur">
             <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-white border-r-[20px] border-r-transparent"></div>
             <p>
               During my high school years, I made the decision to not complete
@@ -79,14 +79,14 @@ const Life = () => {
               committed to ongoing personal and professional growth.
             </p>
           </div>
-          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[60%] md:left-[65%] -translate-x-1/2 w-96 lg:w-72 p-5 border border-white rounded-lg">
+          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[60%] md:left-[65%] -translate-x-1/2 w-96 lg:w-72 p-5 border border-white rounded-lg backdrop-blur">
             <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-white border-r-[20px] border-r-transparent"></div>
             <p>
               I obtained a diploma in PC repair technology from an institute,
               after completing a two-year program of study.
             </p>
           </div>
-          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[100%] -translate-x-1/2 w-96 lg:w-80 p-5 border border-white rounded-lg">
+          <div className="absolute -bottom-[1100%] translate-y-[100%] left-[100%] -translate-x-1/2 w-96 lg:w-80 p-5 border border-white rounded-lg backdrop-blur">
             <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-white border-r-[20px] border-r-transparent"></div>
             <p>
               With my year of self-directed learning in software engineering

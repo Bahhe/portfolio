@@ -1,9 +1,10 @@
 import Image from "next/image";
 import projectOne from "@/public/projectOne.png";
 import projectTwo from "@/public/projectTwo.png";
+import projectThree from "@/public/projectThree.png";
 import Link from "next/link";
 import { VscGithub, VscProject } from "react-icons/vsc";
-import { SiExpress, SiMongodb, SiTrpc } from "react-icons/si";
+import { SiExpress, SiMongodb, SiOpenai, SiTrpc } from "react-icons/si";
 import {
   TbBrandNextjs,
   TbBrandTailwind,
@@ -51,7 +52,7 @@ const Projects = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="lg:w-96 w-72 h-[500px] border border-white rounded"
+            className="lg:w-96 w-72 h-[500px] border border-white rounded backdrop-blur"
           >
             <a
               href="https://blackbeard-beta.vercel.app/"
@@ -102,7 +103,7 @@ const Projects = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="lg:w-96 w-72 h-[500px] border border-white rounded"
+            className="lg:w-96 w-72 h-[500px] border border-white rounded backdrop-blur"
           >
             <a
               href="https://blackbeardt.store"
@@ -138,6 +139,57 @@ const Projects = () => {
                   Github repo{" --> "}
                   <Link
                     href="https://github.com/Bahhe/webstore-frontend"
+                    className="text-green-500"
+                  >
+                    <VscGithub className="text-2xl" />
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </Tilt>
+        <Tilt>
+          <motion.div
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="lg:w-96 w-72 h-[500px] border border-white rounded backdrop-blur"
+          >
+            <a
+              href="https://brainstorm-ai.vercel.app/"
+              target="_blank"
+              className="h-2/5 p-5 flex items-center justify-center"
+            >
+              <Image
+                src={projectThree}
+                alt="website picture"
+                className="object-cover rounded"
+              />
+            </a>
+            <div className="mx-4 my-2 flex items-center gap-2 text-2xl">
+              <TbBrandNextjs />
+              <TbBrandTypescript />
+              <SiOpenai />
+            </div>
+            <div className="h-1/2 flex flex-col justify-evenly">
+              <h1 className="mx-4 my-2 text-2xl font-bold capitalize">
+                BrainstormAi
+              </h1>
+              <p className="mx-4 my-2">
+                chatbot app powered by OpenAI&apos;s GPT-3.5 model. This
+                intelligent conversational agent can understand and respond to
+                natural language inputs from users with a high degree of
+                accuracy.
+              </p>
+              <div className="mx-4 my-2 flex items-center justify-between">
+                <p className="font-bold">
+                  Built with: <span className="text-green-500">Next.JS</span>
+                </p>
+                <p className="font-bold flex items-center gap-2">
+                  Github repo{" --> "}
+                  <Link
+                    href="https://github.com/Bahhe/BrainstormAi"
                     className="text-green-500"
                   >
                     <VscGithub className="text-2xl" />

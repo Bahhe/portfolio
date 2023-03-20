@@ -1,5 +1,4 @@
 import About from "@/components/About";
-import Background from "@/components/Background";
 import Buttons from "@/components/Buttons";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -30,7 +29,6 @@ export default function Home() {
         <link rel="icon" href="/mypic.ico" />
       </Head>
       <main className="flex flex-col text-white overflow-hidden" ref={ref}>
-        <Background />
         <Hero />
         <About />
         <Life />

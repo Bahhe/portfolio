@@ -51,7 +51,7 @@ const Contact = () => {
           <form
             onSubmit={sendEmail}
             ref={form}
-            className="flex flex-col items-center border border-white p-10 rounded"
+            className="flex flex-col items-center border border-white p-10 rounded backdrop-blur"
           >
             <input
               type="text"
