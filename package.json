@@ -30,6 +30,7 @@
     "react-particles": "^2.9.3",
     "react-scroll": "^1.8.9",
     "react-tsparticles": "^2.9.3",
+    "sharp": "^0.31.3",
     "smooth-scrollbar": "^8.8.1",
     "tsparticles": "^2.9.3",
     "typescript": "4.9.5"
