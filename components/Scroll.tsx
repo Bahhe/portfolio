@@ -17,7 +17,7 @@ const Scroll = () => {
           repeat: Infinity,
           repeatType: "loop",
         }}
-        className="absolute right-1/2 bottom-10 text-3xl"
+        className="absolute right-1/2 bottom-10 text-3xl px-10 pt-10"
       >
         <TfiAngleDoubleDown />
       </motion.div>
