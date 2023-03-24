@@ -6,8 +6,28 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { SiJavascript } from "react-icons/si";
 import Scroll from "./Scroll";
 import { motion } from "framer-motion";
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Baha Eddine", "a Software Engineer"], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 100,
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <section className="mx-auto lg:w-1/2 h-screen">
       <div className="flex justify-center items-center gap-10 mt-20">
@@ -33,7 +53,9 @@ const Hero = () => {
         <div className="relative">
           <h1 className="text-white text-2xl lg:text-4xl font-bold ml-10 lg:ml-auto">
             <span className="lg:text-7xl text-4xl">Hi,</span> I&apos;m{" "}
-            <span className="text-green-500">Baha Eddine</span>
+            <span ref={el} className="text-green-500">
+              Baha Eddine
+            </span>
           </h1>
           <p className="text-white lg:w-[500px] ml-10 mt-10 text-lg font-semibold">
             As a software engineer, I specialize in developing efficient,
