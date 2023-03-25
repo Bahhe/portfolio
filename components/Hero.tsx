@@ -54,7 +54,7 @@ const Hero = () => {
           <h1 className="text-white text-2xl lg:text-4xl font-bold ml-10 lg:ml-auto">
             <span className="lg:text-7xl text-4xl">Hi,</span> I&apos;m{" "}
             <span ref={el} className="text-green-500">
-              Baha Eddine
+              {/* Baha Eddine */}
             </span>
           </h1>
           <p className="text-white lg:w-[500px] ml-10 mt-10 text-lg font-semibold">
