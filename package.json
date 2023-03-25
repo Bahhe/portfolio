@@ -29,6 +29,7 @@
     "react-icons": "^4.8.0",
     "react-parallax-tilt": "^1.7.114",
     "react-particles": "^2.9.3",
+    "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
     "react-tsparticles": "^2.9.3",
     "sharp": "^0.31.3",

@@ -4,10 +4,11 @@ import { MdWork } from "react-icons/md";
 import { motion } from "framer-motion";
 import Swipe from "./Swipe";
 import { useState } from "react";
-import { isMobile } from "react-device-detect";
+import { useMediaQuery } from "react-responsive";
 
 const Life = () => {
   const [show, setShow] = useState(true);
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const handleScroll = () => {
     setShow(false);

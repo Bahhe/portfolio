@@ -14,7 +14,7 @@ const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Baha Eddine", "a Software Engineer"], // Strings to display
+      strings: ["Baha Eddine"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 100,
