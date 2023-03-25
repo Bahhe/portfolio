@@ -4,11 +4,9 @@ import { MdWork } from "react-icons/md";
 import { motion } from "framer-motion";
 import Swipe from "./Swipe";
 import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
 const Life = () => {
   const [show, setShow] = useState(true);
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const handleScroll = () => {
     setShow(false);
@@ -128,7 +126,6 @@ const Life = () => {
             viewport={{ once: true, amount: 0 }}
             style={{
               bottom: "-1100%",
-              left: isMobile ? "30%" : "32%",
               translateX: "-50%",
               translateY: "100%",
             }}
@@ -155,7 +152,6 @@ const Life = () => {
             viewport={{ once: true, amount: 0 }}
             style={{
               bottom: "-1100%",
-              left: isMobile ? "60%" : "65%",
               translateX: "-50%",
               translateY: "100%",
             }}
