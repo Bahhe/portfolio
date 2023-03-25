@@ -1,6 +1,6 @@
 import { GiBarbarian, GiDiploma, GiNewBorn } from "react-icons/gi";
 import { TbSchoolOff } from "react-icons/tb";
-import { MdWork } from "react-icons/md";
+import { MdOutlineHistoryEdu, MdWork } from "react-icons/md";
 import { motion } from "framer-motion";
 import Swipe from "./Swipe";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const Life = () => {
         viewport={{ once: true, amount: 0 }}
         className="flex items-center gap-5 mt-20 lg:mt-0"
       >
-        <GiBarbarian className="text-3xl text-green-500" />
+        <MdOutlineHistoryEdu className="text-3xl text-green-500" />
         <h1 className="text-white text-5xl font-bold capitalize">My Life</h1>
       </motion.div>
       <motion.div

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TfiAngleDoubleDown } from "react-icons/tfi";
+import { RiSpaceShipLine } from "react-icons/ri";
 import { Link } from "react-scroll";
 
 const Scroll = () => {
@@ -19,7 +19,7 @@ const Scroll = () => {
         }}
         className="absolute right-1/2 bottom-10 text-3xl px-10 pt-10"
       >
-        <TfiAngleDoubleDown />
+        <RiSpaceShipLine className="rotate-180" />
       </motion.div>
     </Link>
   );

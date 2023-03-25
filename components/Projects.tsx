@@ -42,7 +42,8 @@ const Projects = () => {
           design that can be accessed on any device. It also includes an admin
           panel for managing the products, inventory, and customer orders, as
           well as features like user authentication, product search, cart
-          functionality, and secure payment options.
+          functionality, and secure payment options, including the third chatbot
+          small project that uses OpenAI api.
         </p>
       </motion.div>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-20">
