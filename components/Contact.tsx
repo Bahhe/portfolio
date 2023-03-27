@@ -1,14 +1,60 @@
 import emailjs from "@emailjs/browser";
 import { AiOutlinePhone } from "react-icons/ai";
 import EarthCanvas from "./canvas/Earth";
-import { FormEvent, useRef } from "react";
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState(false);
+  const [nameBorder, setNameBorder] = useState("border-white");
+  const [emailBorder, setEmailBorder] = useState("border-white");
+  const [messageBorder, setMessageBorder] = useState("border-white");
+
+  useEffect(() => {
+    if (name && message && email) {
+      setError(false);
+    }
+    if (name) {
+      setNameBorder("border-white");
+    }
+    if (email) {
+      setEmailBorder("border-white");
+    }
+    if (message) {
+      setMessageBorder("border-white");
+    }
+  }, [name, message, email]);
+
+  const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+  const onEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+  const onMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(e.target.value);
+  };
+
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      setError(true);
+      if (!name) {
+        setNameBorder("border-red-500");
+      }
+      if (!email) {
+        setEmailBorder("border-red-500");
+      }
+      if (!message) {
+        setMessageBorder("border-red-500");
+      }
+      return;
+    }
     const currentForm = form.current;
     if (currentForm == null) return;
     emailjs
@@ -21,7 +67,9 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("you message was sent successfully");
+          alert(
+            "Thank you for contacting us. We will get back to you as soon as possible."
+          );
         },
         (error) => {
           console.log(error.text);
@@ -53,22 +101,35 @@ const Contact = () => {
             ref={form}
             className="flex flex-col items-center border border-white p-10 rounded backdrop-blur"
           >
+            {error ? (
+              <span className="absolute left-10 top-5 text-sm text-red-500">
+                *All fields are required
+              </span>
+            ) : (
+              ""
+            )}
             <input
               type="text"
               placeholder="Name"
               name="user_name"
-              className="py-3 px-4 my-5 bg-transparent rounded border border-white placeholder-white w-52 lg:w-80"
+              value={name}
+              onChange={onNameChange}
+              className={`py-3 px-4 my-5 bg-transparent rounded border ${nameBorder} placeholder-white w-52 lg:w-80`}
             />
             <input
               type="from_email"
               placeholder="Email"
               name="user_email"
-              className="py-3 px-4 my-5 bg-transparent rounded border border-white placeholder-white w-52 lg:w-80"
+              value={email}
+              onChange={onEmailChange}
+              className={`py-3 px-4 my-5 bg-transparent rounded border ${emailBorder} placeholder-white w-52 lg:w-80`}
             />
             <textarea
               placeholder="Message..."
               name="message"
-              className="py-3 px-4 my-5 bg-transparent rounded border border-white placeholder-white w-52 lg:w-80 h-32"
+              value={message}
+              onChange={onMessageChange}
+              className={`py-3 px-4 my-5 bg-transparent rounded border ${messageBorder} placeholder-white w-52 lg:w-80 h-32`}
             />
 
             <input
