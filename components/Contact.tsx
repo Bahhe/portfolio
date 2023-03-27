@@ -74,7 +74,12 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
   };
   return (
     <section className="w-5/6 my-52 mx-auto">
